@@ -1,0 +1,16 @@
+/* Custom CSS to center the form */
+html, body {
+    height: 100%;
+}
+
+.center-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.center-form .form-container {
+    width: 100%;
+    max-width: 400px;
+}

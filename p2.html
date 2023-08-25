@@ -7,74 +7,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jquery effects</title>
     <link rel="stylesheet" href="p2.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-           $("#menu-toggle").click(function(){
-            $("#side-nav").toggle();
-           });
-           $("#fade-button").click(function(){
-            $("#fade-img").fadeToggle();
-           });
-           $(".info-head").click(function(){
-            $(".info-body").slideToggle();
-           });
-           $(".show").click(function(){
-            $("content-box").toggle();
-           });
-           $(".content-box").hover(function(){
-            $(".content-box").animate({
-                height:"100px",
-                width:"200px",
-                padding:"20px"
-            });
-           });
-        });
-
-    </script>
 </head>
 
 <body>
     <header>
-        <img id="menu-toggle" src="menu-icon.png" width="50px" height="50px" style="float:left">
-        <b>Jquery effects</b>
-    </header>
-<hr>
-
-    <main class="row">
-        <ul id="side-nav" class="col-1">
-            <li class="active">Home</li>
-            <li>Subscription</li>
-            <li>Playlist</li>
-            <li>Most viewed</li>
-            <li class="show">Notifications *
-                <div class="content-box">You have a notification...
+         <h1>Home</h1>
+         <nav>
+             <ul>
+                 <li><a href="#">Home</a></li>
+                 <li><a href="#">About</a></li>
+                 <li><a href="#">blog</a></li>
+                 <li><a href="#">Contact</a></li>
+             </ul>
+         </nav>
+    </header> 
+    <div class="row">
+         <div class="leftcolumn">
+             <div class="card">
+                 <h2>Heading 1</h2>
+                 <h5>Title description, Dec 7, 2017</h5>
+                 <img src="IMG_2181.jpeg" alt="1" height="200px"/>
+             </div>
+             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui exercitationem adipisci repellat doloremque, illum voluptas consequuntur, delectus accusamus modi nisi odio nobis temporibus voluptatibus quidem commodi iste voluptatum alias.
+             </p>
+         </div>
+         <div class="rightcolum">
+             <div class="card">
+                 <h2>Heading 2</h2>
+                 <h5>Title description, Dec 7, 2017</h5>
+                 <img src="IMG_1984.jpeg" alt="1" height="100px"/>
+             </div>
+             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim qui exercitationem adipisci repellat doloremque, illum voluptas consequuntur, delectus accusamus modi nisi odio nobis temporibus voluptatibus quidem commodi iste voluptatum alias.
+         </div>
+    </div>
+    <footer>
+            <div class="footer-container">
+                <div class="row">
+                    <!-- About Us Column -->
+                    <div class="col-md-4 col-sm-12">
+                        <div class="footer-nav-container">
+                            <p class="footer-nav-title">
+                                About Us
+                            </p>
+                            <a class="footer-nav-link" href="/procedure/facial">Procedures</a>
+                            <a class="footer-nav-link" href="/doctor">Doctors</a>
+                            <a class="footer-nav-link" href="/instrument">Instruments</a>
+                        </div>
+                    </div>
+        
+                    <!-- Contact Us Column -->
+                    <div class="col-md-4 col-sm-12">
+                        <div class="footer-nav-container">
+                            <p class="footer-nav-title">
+                                Contact Us
+                            </p>
+                            <p class="footer-nav-contact-title">
+                                Address:
+                            </p>
+                            <p class="footer-nav-contact-content">
+                                9100 Wilshire Blvd,  Beverly hills, CA 90212
+                            </p>
+                            <p class="footer-nav-contact-title">
+                                Email:
+                            </p>
+                            <p class="footer-nav-contact-content">
+                                marketing@charm-life.com
+                            </p>
+                        </div>
+                    </div>
+        
+                    <!-- Follow Us Column -->
+                    <div class="col-md-4 col-sm-12">
+                        <div class="footer-nav-container">
+                            <p class="footer-nav-title">
+                                Follow Us
+                            </p>
+                            <div class="social-media-icons">
+                                <a class="social-media-link" href="https://www.instagram.com/charm_life_official/?igshid=YmMyMTA2M2Y%3D" target="_blank" rel="noreferrer">
+                                    <img class="social-media-icon" src="instagram.svg" alt="instagram" />
+                                </a>
+                                <a class="social-media-link" href="https://www.tiktok.com/@charmlifecl?_t=8YEeyJyGDjm&_r=1https://www.tiktok.com/@charmlifecl?_t=8YEeyJyGDjm&_r=1" target="_blank" rel="noreferrer">
+                                    <img class="social-media-icon" src="instagram.svg" alt="tiktok" />
+                                </a>
+                                <a class="social-media-link" href="https://www.facebook.com/profile.php?id=100063997782773&mibextid=LQQJ4d" target="_blank" rel="noreferrer">
+                                    <img class="social-media-icon" src="instagram.svg" alt="facebook" />
+                                </a>
+                                <a class="social-media-link" href="https://www.linkedin.com/company/charm-life" target="_blank" rel="noreferrer">
+                                    <img class="social-media-icon" src="instagram.svg" alt="linkedin" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </li>
-            <hr>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li> JavaScript</li>
-            <li>jQuery</li>
-        </ul>
-        <div class="fade-effect col-3">
-            <button id="fade-button">Fade</button>
-            <img src="banner1.jpg" height="400px" id="fade-img">
-        </div>
-        <div class="info-head col-2">
-            <p>Header</p>
-            <div class="info-body">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque illo repellendus
-                labore quibusdam numquam error nemo hic culpa atque mollitia at expedita nulla
-                recusandae aperiam reprehenderit sed corporis, maxime alias!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque illo repellendus
-                labore quibusdam numquam error nemo hic culpa atque mollitia at expedita nulla
-                recusandae aperiam reprehenderit sed corporis, maxime alias!
             </div>
-        </div>
-    
-    </main>
-    
-</body>
+    </footer>
+ </body>
 
 </html>
