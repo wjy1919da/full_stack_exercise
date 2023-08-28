@@ -34,10 +34,16 @@
     <script src="jquery-min.js"></script>
     <script src="jquery.validate.min.js"></script>
     <script>
+       $.validator.addMethod("startsWithCapital", function(value, element) {
+            return this.optional(element) || /^[A-Z]/.test(value);
+        }, "<span style='color:red;'>Please start with a capital letter.</span>");
        $(function(){
         $("form[name='registration']").validate({
             rules:{
-                firstname:"required",
+                firstname:{
+                    required: true,
+                    startsWithCapital: true
+                },
                 email:{
                     required:true,
                     email:true
@@ -53,7 +59,10 @@
                 }
             },
             messages:{
-                firstname:"<span style='color:red;'> Please enter the name</span>",
+                firstname:{
+                    required: "<span style='color:red;'>Please enter the name</span>",
+                    startsWithCapital: "<span style='color:red;'>Please start with a capital letter</span>",
+                },
                 password:{
                     required:"<span style='color:red;'> Please enter the password</span>",
                     minlength:"<span style='color:red;'>Your password must be 5 characters long</span>",
