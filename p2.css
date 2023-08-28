@@ -6,9 +6,11 @@
         justify-content: flex-start;
         align-items: center;
         border: 0;
-        position: relative;
+        position: fixed;
         height: 64px;
         z-index: 999;
+        top: 0px;
+        
     }
     
     .header-logo-container {
@@ -43,9 +45,22 @@
     
    
     .row{
+        margin-top: 64px;
         display: flex;
         flex-direction: row;
     }
+    .leftcolumn{
+        float: left;
+        width: 60vw;
+    }
+    .rightcolumn{
+        float: left;
+        width: 40vw;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    
     body{
         font-family: 'Poppins', sans-serif;
     }
@@ -55,16 +70,7 @@
         display: table;
         clear: both;
     }
-    .leftcolum{
-        float: left;
-        width: 50vw;
-    }
-    .rightcolum{
-        float: left;
-        width: 50vw;
-        padding-left: 20px;
-        padding-right: 40px;
-    }
+    
     .colimg{
         width: 100%;
         padding: 20px;
